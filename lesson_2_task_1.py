@@ -3,13 +3,10 @@
 # Пример:
 # 0,56 -> 11
 
-num = input('Введите вещественное число: ')
-punctuation = [',', '.']
+num = float(input('Введите вещественное число: '))
+st = str(num).replace('.', '')
+s = 0
+for char in st:
+    s += int(char)
+print(f'{num} -> {s}')
 
-for p in punctuation:
-    num = num.replace(p, '')
-
-sum_num = 0
-for n in num:
-    sum_num += int(n)
-print(sum_num)

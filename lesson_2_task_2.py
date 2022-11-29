@@ -14,12 +14,13 @@ N = int(input('Введите число N: '))
 rez = []
 str = ['1']
 
-for i in range(N):
-    print(multiply_num(i))
-    rez.append(multiply_num(i))
-for i in range(2, N + 1):
-    str.append(str[i - 2] + f'* {i}')
+print(multiply_num(N))
 
-# print(f'Пусть N = {N}, тогда [ ')
-# print(rez, sep=', ')
-# print(f'] ({str})', sep=', ')
+for i in range(N):
+    rez.append(multiply_num(i + 1))
+for i in range(2, N + 1):
+    str.append(str[i - 2] + f'*{i}')
+
+print(f'Пусть N = {N}, тогда ', end='')
+print(rez, end=' ')
+print('(' + ', '.join(str) + ')')
