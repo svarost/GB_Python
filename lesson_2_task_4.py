@@ -13,7 +13,7 @@ print(ls)
 index = [int(i) for i in input('Введите индексы: ').split()]
 print(index)
 
-s = 0
+s = 1
 for i in index:
     s *= ls[i]
 
