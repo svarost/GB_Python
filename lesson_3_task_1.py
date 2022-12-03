@@ -9,7 +9,8 @@ def odd_sum(lst: list):
     for i in range(1, len(lst), 2):
         s += lst[i]
     return s
-lst = [2, 3, 5, 9, 3]
+
+lst = [int(i) for i in input('Задайте список из чисел: ').split()]
 print(f'{lst} -> на нечётных индексах элементы ', end='')
 for i in range(1, len(lst), 2):
     print(lst[i], end=', ')
